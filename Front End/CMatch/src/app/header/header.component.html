@@ -1,0 +1,46 @@
+
+<!-- Header -->
+<!-- <mat-sidenav-container class="example-container" >
+    <mat-sidenav #sidenav mode = "push">
+        <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+        <p>
+          <mat-nav-list>
+                    <a mat-list-item>Upcoming Matches</a>
+                  <a mat-list-item>Previous Matches</a>
+                  <a mat-list-item>Favourite</a>
+                  <a mat-list-item>Logout</a>
+                  <a mat-list-item>Login</a>
+                  </mat-nav-list>
+                  </p>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <button mat-button (click)="sidenav.toggle()" >Toggle</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span> CricMAD</span>
+      <div class="main">
+        <button mat-button class="upcoming-button" [routerLink]="['/dashboard']"
+          routerLinkActive="active">Dashboard</button>
+        <button mat-button class="upcoming-button" [routerLink]="['/upcomingmatches']" routerLinkActive="active">Upcoming
+          Matches</button>
+        <button mat-button class="previous-button" [routerLink]="['/oldmatches']" routerLinkActive="active">Previous
+          Matches</button>
+        <button mat-button class="favourite-button" [routerLink]="['/favourite']"
+          routerLinkActive="active">Favourite</button>
+        
+          <button mat-button *ngIf="!getName()" class="login-button" [routerLink]="['/login']" routerLinkActive="active">LogIN</button>
+          <button mat-button [matMenuTriggerFor]="user" *ngIf="getName()">{{authenticationService.getUserName()}}</button>
+          <mat-menu #user="matMenu" >
+            <button mat-menu-item ="view" [routerLink]="['/viewProfile']">View Profile</button>
+              <button mat-menu-item ="update"  (click)="updateUser()" >Update Profile</button>
+              <button mat-menu-item ="image" [routerLink]="['/profileimage']" >Add Image</button>
+              <button mat-menu-item ="logout" (click) = "logout()">LogOut</button>
+            </mat-menu>
+          <!-- <button mat-button *ngIf="getName()" >LogOut</button> -->
+        
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  

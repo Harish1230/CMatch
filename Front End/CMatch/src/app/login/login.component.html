@@ -1,0 +1,42 @@
+<div class="center">
+  <form class="loginDiv">
+    <p class="centerforcmatch">
+      <span style='color: blue'>C</span>
+      <span style='color: red'>M</span>
+      <span style='color: yellow'>a</span>
+      <span style='color: blue'>t</span>
+      <span style='color: green'>c</span>
+      <span style='color: red'>h</span>
+    </p>
+    <p class="centerforsignin"> Sign in </p>
+    <p class="centerforContinuetoGmail">Continue to Cmatch</p>
+
+    <br>
+
+    <mat-form-field class="mailDiv">
+      <input matInput placeholder="Email" required name="userId" [(ngModel)]="userId">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="mailDiv">
+      <input matInput placeholder="Password"  type="password" minlength="8" maxlength="15"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        required name="password" [(ngModel)]="userPassword">
+    </mat-form-field>
+    <br>
+
+    <button mat-raised-button color="accent" (click)="login()">Submit</button>&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button routerLink="/registration" mat-button color="accent">Create Account</button>
+
+  </form>
+
+</div>

@@ -1,0 +1,49 @@
+.searchBox {
+    min-width: 150px;
+    max-width: 200px;
+    width: 100%;
+  }
+  form{
+    position: relative;
+    left: 40%;
+    object-fit: cover;
+    /* z-index: -1; */
+   }
+  #search-results{
+    height: 150px;
+    overflow: auto;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* z-index: -1; */
+  }
+  
+  table {
+    width: 100%;
+    /* z-index: 1; */
+  }
+  .oldContainer{
+    height: 200px;
+    overflow: auto;
+    /* z-index: -1; */
+    text-decoration-color: black;
+  }
+  
+.upcomingContainer {
+  height: 400px;
+  overflow: auto;
+  /* z-index: -1; */
+  text-decoration-color: black;
+}
+button:hover {
+  background-color: #000000;
+  
+}
+.main{
+  opacity: 1.0;
+  /* filter: alpha(opacity=50); */
+  /* object-fit: cover; */
+  /* scroll-behavior: unset; */
+  overflow: hidden;
+}
+
+ 

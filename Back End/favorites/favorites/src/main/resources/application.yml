@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      database: favouresdb
+      port: 27017
+      host: localhost
+  application:
+    name: favorite-service
+server:
+  port: 8083

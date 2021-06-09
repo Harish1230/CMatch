@@ -1,0 +1,9 @@
+img{
+    max-width: 400px;
+}
+div{
+    /* z-index: 1; */
+    position: absolute;
+    left: 440px;
+    top: 80px;
+}

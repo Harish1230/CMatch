@@ -1,0 +1,45 @@
+.my-form{
+  width: 300px;
+    padding: 50px;
+    margin: 20px;
+    margin: 0 auto;
+}
+
+.tooltiptext{
+  visibility: hidden;
+  width: 250px;
+  color: red;
+  text-align: center;
+  padding: 15px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.header{
+  text-align: center;
+  margin-top: 35px;
+  color:red;
+  margin-right: 140px;
+}
+
+.signUp{
+  margin-top: 25px;
+  margin: 0 auto;
+  font-size:20px;
+}
+
+.button{
+  margin:auto;
+  text-align: center; 
+}
+
+mat-label{
+  color: rgb(153, 132, 132);
+}

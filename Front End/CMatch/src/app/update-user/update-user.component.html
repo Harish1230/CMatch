@@ -1,0 +1,62 @@
+<!-- <form >
+    <div class="container">
+      <h1>Update profile</h1>
+      <p>please update the following profile here.</p>
+      <hr>
+      <label for="userName"><b>userName</b></label>
+      <input  [(ngModel)]="userData.userName"type="text" placeholder="Enter firstName" name="userName" required>
+      <label for="userEmail"><b>userEmail</b></label>
+      <input  [(ngModel)]="userData.userEmail"type="text" placeholder="Enter Email" name="userEmail" required>
+  <label for="userPassword"><b>userPassword</b></label>
+      <input  [(ngModel)]="userData.userPassword" [type]="hide ? 'password' : 'text'" placeholder="Enter Password" name="userPassword" required> 
+    <hr>
+      <button type="submit" name="submit"class="registerbtn" (click)=" updateUserDetails()">update</button>
+    </div>
+  </form> -->
+  <div class="header">
+    <span class="update">Update Your Profile</span>
+</div>
+ <br>
+
+    <form  class="my-form" autocomplete="off">
+    
+         <!-- <mat-form-field class="full-width">
+            <mat-label class="label">Email Id</mat-label>
+            <input type="email" [(ngModel)]="userId"  matInput  placeholder="Email Id" name="userId"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+         </mat-form-field> -->
+
+         <mat-form-field class="full-width">
+            <mat-label class="label">Username</mat-label>
+            <input type="text" [(ngModel)]="userName"  matInput  placeholder="userName" name="userName" required>
+         </mat-form-field>
+
+         <!-- <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input type="text" [(ngModel)]="email"  matInput  placeholder="Email" name="email"  required>
+         </mat-form-field> -->
+
+         <div class="tooltip">
+           <mat-form-field class="full-width">     
+              <mat-label class="label">Password</mat-label>              
+              <input type="password" [(ngModel)]="userPassword" matInput  placeholder="Password"  name="userPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"  required>
+             <span class="tooltiptext"> *Password should be alphanumeric and must have at least 6 or more characters </span>     
+           </mat-form-field>
+          </div>
+
+           <mat-form-field class="full-width">
+            <mat-label class="label"> Confirm Password</mat-label>
+            <input type="password" [(ngModel)]="confirmPassword" matInput  placeholder="Confirm Password"  name="confirmPassword"   required>
+           </mat-form-field>
+
+         <mat-form-field class="full-width">
+            <mat-label class="label">Mobile Number</mat-label>
+            <input type="text" [(ngModel)]="mobilenumber"  matInput  placeholder="Mobile Number" name="mobilenumber"  required>
+         </mat-form-field>
+         <br>
+         
+         <mat-card-actions>
+           <button  class="button" mat-raised-button (click)=" updateUserDetails()" color="primary" >Update</button>
+          </mat-card-actions>
+      </form>
+
+

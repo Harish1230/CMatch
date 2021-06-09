@@ -1,0 +1,8 @@
+
+  table {
+    width: 100%;
+  }
+  .FavouriteContainer{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
